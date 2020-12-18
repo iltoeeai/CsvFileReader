@@ -13,8 +13,6 @@ public class CSVReader {
         try {
             BufferedReader br = new BufferedReader(new FileReader(path));
 
-
-
             while ((line = br.readLine()) != null) {
 //                System.out.println(line);
                String[] values = line.split(",");
@@ -22,14 +20,10 @@ public class CSVReader {
                 System.out.println("Player: " + values[0] + ", Age: " + values[4]);
             }
 
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
